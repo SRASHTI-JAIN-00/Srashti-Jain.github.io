@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Resume</title>
+
+<style>
+:root {
+--brown-dark: #4e342e;
+--brown: #6d4c41;
+--brown-light: #8d6e63;
+--beige: #d7ccc8;
+--cream: #f5f0e8;
+}
+
+body {
+margin: 0;
+font-family: "Segoe UI", sans-serif;
+background: var(--cream);
+color: var(--brown-dark);
+animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+from { opacity: 0; }
+to { opacity: 1; }
+}
+
+/* Navbar */
+.navbar {
+width: 100%;
+background: var(--brown);
+padding: 15px 0;
+text-align: center;
+position: sticky;
+top: 0;
+z-index: 1000;
+}
+.navbar a {
+color: white;
+text-decoration: none;
+margin: 0 20px;
+font-weight: bold;
+transition: 0.3s;
+}
+
+.navbar a:hover {
+color: var(--beige);
+}
+
+.container {
+width: 80%;
+margin: 40px auto;
+display: grid;
+grid-template-columns: 1fr 2fr;
+gap: 30px;
+}
+
+.sidebar {
+background: var(--brown-light);
+padding: 30px;
+border-radius: 12px;
+color: white;
+}
+
+.profile-pic {
+width: 150px;
+height: 150px;
+border-radius: 50%;
+display: block;
+margin: 0 auto 20px;
+object-fit: cover;
+border: 4px solid var(--brown-dark);
+}
+
+h2.section-title {
+  border-left: 5px solid var(--brown);
+padding-left: 10px;
+margin-bottom: 10px;
+color: var(--brown-dark);
+}
+
+.main {
+background: white;
+padding: 30px;
+border-radius: 12px;
+box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.project {
+margin-bottom: 20px;
+padding: 15px;
+background: var(--beige);
+border-left: 5px solid var(--brown);
+border-radius: 8px;
+transition: transform 0.3s;
+}
+
+.project:hover {
+transform: scale(1.02);
+}
+
+/* Form Section */
+.form-container {
+width: 80%;
+margin: 40px auto;
+background: var(--beige);
+padding: 30px;
+border-radius: 15px;
+box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+border: 3px solid var(--brown-light);
+animation: fadeIn 0.8s ease-in-out;
+}
+
+input:focus, textarea:focus {
+border-color: var(--brown);
+box-shadow: 0 0 8px rgba(109, 76, 65, 0.5);
+outline: none;
+}
+
+input, textarea {
+width: 100%;
+padding: 12px;
+margin: 12px 0;
+border-radius: 10px;
+border: 2px solid var(--brown-light);
+background: var(--cream);
+transition: 0.3s;
+}
+
+button {
+background: var(--brown);
+color: white;
+padding: 12px 20px;
+border: none;
+border-radius: 10px;
+cursor: pointer;
+transition: 0.3s;
+width: 100%;
+margin-top: 10px;
+font-size: 16px;
+}
+
+button:hover {
+background: var(--brown-dark);
+transform: scale(1.03);
+}
+
+/* Output Card */
+.output-card {
+background: var(--beige);
+padding: 20px;
+border-left: 5px solid var(--brown);
+border-radius: 10px;
+margin-top: 20px;
+display: none;
+}
+</style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <div class="navbar">
+    <a href="#about">About</a>
+    <a href="#education">Education</a>
+    <a href="#projects">Projects</a>
+    <a href="#form">Friend Form</a>
+  </div>
+
+  <div class="container">
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <img src="WhatsApp Image 2025-12-08 at 10.18.35_ccaad01d.jpg" alt="Profile Picture" class="profile-pic">
+
+      <h2>Contact Info</h2>
+      <p><strong>Email:</strong> jsrashti447@gmail.com</p>
+      <p><strong>Phone:</strong> +91-9340790518</p>
+      <p><strong>Location:</strong> Gwalior(M.P), India</p>
+
+      <h2>Skills</h2>
+      <ul type="circle">
+        <li>Python</li>
+        <li>C++</li>
+        <li>HTML, CSS</li>
+        <li>SQL</li>
+        <li>Data Preprocessing - Pandas, NumPy, Scikit-learn</li>
+        <li>Data Visualization - Matplotlib, Seaborn</li>
+        <li>Basic Model Development</li>
+      </ul>
+
+      <h2>Certificates</h2>
+      <ul type="circle">
+        <li>IBM Data Science Professional Certificate - Coursera</li>
+        <li>AWS Academy Data Centre Technician Certificate - Amazon Web Services(AWS)</li>
+      </ul>
+    </div>
+
+    <!-- Main Section -->
+    <div class="main">
+      <h1>SRASHTI JAIN</h1>
+
+      <h2 id="about" class="section-title">About Me</h2>
+      <p>
+        I am currently pursuing my B.Tech and actively building my skills in Data Science and AI/ML.
+        I work with Python, preprocessing, visualization, and ML modeling. I enjoy creating meaningful
+        projects based on real-world datasets.
+      </p>
+
+      <h2 id="education" class="section-title">Education</h2>
+      <p><strong>B.Tech in Computer Science</strong></p>
+      Rustamji Institute of Technology, Tekanpur
+      <p>📅 2023–2027</p>
+
+      <h2 id="projects" class="section-title">Projects</h2>
+
+      <div class="project">
+        <h3>📌 Air Quality Analysis</h3>
+        <p>Performed EDA, visualization, and prediction modeling on air pollution data.</p>
+      </div>
+
+      <div class="project">
+        <h3>📌 Asthma Prediction Model</h3>
+        <p>Implemented ML classification algorithms to determine risk of asthma.
+          Also used Explainable AI (XAI) tools SHAP & LIME for explanations.</p>
+      </div>
+
+      <div class="project">
+        <h3>📌 Personal Portfolio Website</h3>
+        <p>Created a fully responsive website using HTML, CSS, JavaScript.</p>
+      </div>
+
+      <div class="project">
+        <h3>📌 PrimeHarvest – Online Fruit Shopping Website</h3>
+        <p>Developed a responsive fruit shopping site with cart functionality using HTML, CSS, JavaScript.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Friend Details Form -->
+  <div id="form" class="form-container">
+    <h2 class="section-title">Friend Details Form</h2>
+
+    <form id="friendForm">
+      <label><b>Name:</b></label>
+      <input type="text" id="name" required>
+
+      <label><b>Age:</b></label>
+      <input type="number" id="age" required>
+
+      <label><b>Email:</b></label>
+      <input type="email" id="email" required>
+
+      <label><b>Phone Number:</b></label>
+      <input type="tel" id="phone" required>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <div id="output" class="output-card"></div>
+  </div>
+
+
+  <script>
+    const form = document.getElementById("friendForm");
+    const output = document.getElementById("output");
+
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const name = document.getElementById("name").value;
+      const age = document.getElementById("age").value;
+      const email = document.getElementById("email").value;
+      const phone = document.getElementById("phone").value;
+
+      output.style.display = "block";
+      output.innerHTML = `
+      <h3>Friend Details Submitted:</h3>
+      <p><strong>Name:</strong> ${name}</p>
+      <p><strong>Age:</strong> ${age}</p>
+      <p><strong>Email:</strong> ${email}</p>
+      <p><strong>Phone:</strong> ${phone}</p>
+      `;
+    });
+  </script>
+
+</body>
+</html>
